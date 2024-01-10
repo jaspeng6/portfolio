@@ -1,0 +1,252 @@
+/* global */
+html {
+    scroll-behavior: smooth;
+    background-color: #FDFAF5;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Unna', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header and nav bar styles */
+
+header {
+    position: fixed;
+    top: 0;
+    min-height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid black;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    padding-left: 100px;
+}
+
+#header-logo {
+    border-radius: 50%;
+    max-height: 60px;
+    width: auto;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none; 
+    font-size: 20px;
+    margin-right: 180px;
+  }
+
+#navbar li a {
+    margin: 0 25px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:active {
+    color: white;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: antiquewhite;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* main section */
+#welcome-section {
+    padding-top: 100px; 
+    height: calc(100vh - 100px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid grey;
+    padding-bottom: 90px;
+}
+
+
+#welcome-title {
+    text-align: center;
+    font-size: 6rem;
+    padding: 0;
+    margin: 0;
+    font-weight: lighter;
+}
+
+.grid-2cols {
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.4rem;
+    letter-spacing: 0.6px;
+    column-width: 25rem;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.left-col, .right-col {
+    padding: 20px 0;
+}
+
+#self-portrait {
+    aspect-ratio: 4 / 4;
+    max-height: 60vh;
+    border-radius: 0.8rem;
+    width: 100;
+    object-fit: cover;
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+/* Projects section */
+#projects {
+    border-bottom: 1px solid grey;
+    padding-bottom: 90px;
+}
+
+.projects-section-header {
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 100px; 
+    margin: 0;
+    font-weight: lighter;
+    padding-bottom: 100px;
+}
+
+.projects-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-image {
+    aspect-ratio: 16 / 9;
+    max-width: 80vh;
+    border-radius: 0.8rem;
+    object-fit: cover;
+}
+
+.project-tile {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.project-tile:hover {
+    color: grey;
+}
+
+#contact {
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-section-header {
+    text-align: center;
+}
+
+#contact-section-h2 {
+    font-size: 4rem;
+    padding-bottom: 0;
+    margin: 0;
+    font-weight: lighter;
+}
+
+#contact-subtitle {
+    font-size: 2rem;
+    padding-top: 0;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+    .grid-2cols {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding-bottom: 0;
+    }
+
+    #self-portrait {
+        max-height: 40vh;
+        width: auto;
+    }
+
+    .projects-flex {
+        flex-wrap: wrap;
+    }
+
+    .projects-section-header {
+        font-size: 3rem;
+    }
+    
+    .project-tile {
+        font-size: 16px;
+    }
+
+    .btn {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    header {
+        min-height: 40px;
+        padding-left: 30px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    #header-logo {
+        max-height: 30px;
+    }
+
+    #welcome-section {
+        padding-top: 150px; 
+        height: calc(100vh - 40px); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid grey;
+        padding-bottom: 90px;
+    }
+
+}
